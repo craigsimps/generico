@@ -17,12 +17,12 @@
 
 namespace Generico\Theme;
 
+use Generico\Core\Theme;
+
 define( 'CHILD_THEME_NAME', 'Generico' );
 define( 'CHILD_THEME_URL', 'https://genericotheme.com' );
 define( 'CHILD_THEME_VERSION', '0.1.0' );
 
 load_child_theme_textdomain( 'generico', get_stylesheet_directory() . '/languages' );
 
-if ( file_exists( $autoloader = __DIR__ . '/vendor/autoload.php' ) ) {
-	include_once $autoloader;
-}
+add_action( 'genesis_setup', [ new Theme(), 'setup' ], 15 );
