@@ -3,11 +3,10 @@
   "type": "wordpress-theme",
   "description": "Developer-friendly WordPress starter theme, built on the Genesis Framework.",
   "license": "GPL-2.0-or-later",
-  "minimum-stability": "dev",
   "require": {
     "php": ">=7.0",
     "composer/installers":  "~1.0",
-    "generico/theme-support": "dev-master"
+    "generico/theme-support": "^0.1.0"
   },
   "autoload": {
     "psr-4": {
