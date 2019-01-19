@@ -3,16 +3,6 @@
   "type": "wordpress-theme",
   "description": "Developer-friendly WordPress starter theme, built on the Genesis Framework.",
   "license": "GPL-2.0-or-later",
-  "repositories": [
-    {
-      "type": "vcs",
-      "url": "https://github.com/craigsimps/generico-core.git"
-    },
-    {
-      "type": "vcs",
-      "url": "https://github.com/craigsimps/generico-theme-support.git"
-    }
-  ],
   "minimum-stability": "dev",
   "require": {
     "php": ">=7.0",
