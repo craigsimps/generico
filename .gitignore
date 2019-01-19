@@ -1,0 +1,5 @@
+# Ignore Vendor Files
+vendor/
+
+# Ignore .lock files
+*.lock
