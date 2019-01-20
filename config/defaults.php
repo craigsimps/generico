@@ -13,6 +13,7 @@ namespace Generico\Theme;
 use Generico\Core\ImageSizes;
 use Generico\Core\Layouts;
 use Generico\Core\Sidebars;
+use Generico\Core\ThemeSettings;
 use Generico\Core\ThemeSupport;
 
 $generico_add_theme_support = [
@@ -108,12 +109,23 @@ $generico_sidebars = [
 	],
 ];
 
+$generico_theme_settings = [
+	'blog_cat_num'              => 6,
+	'breadcrumb_front_page'     => 0,
+	'content_archive'           => 'full',
+	'content_archive_limit'     => 0,
+	'content_archive_thumbnail' => 0,
+	'posts_nav'                 => 'numeric',
+	'site_layout'               => 'content-sidebar',
+];
+
 return [
-	ThemeSupport::class => [
+	ThemeSupport::class  => [
 		ThemeSupport::ADD    => $generico_add_theme_support,
 		ThemeSupport::REMOVE => [],
 	],
-	ImageSizes::class => $generico_image_sizes,
-	Layouts::class    => $generico_layouts,
-	Sidebars::class   => $generico_sidebars,
+	ImageSizes::class    => $generico_image_sizes,
+	Layouts::class       => $generico_layouts,
+	Sidebars::class      => $generico_sidebars,
+	ThemeSettings::class => $generico_theme_settings,
 ];
