@@ -12,6 +12,7 @@ namespace Generico\Theme;
 
 use Generico\Core\ImageSizes;
 use Generico\Core\Layouts;
+use Generico\Core\Sidebars;
 use Generico\Core\ThemeSupport;
 
 $generico_add_theme_support = [
@@ -100,6 +101,13 @@ $generico_layouts = [
 	],
 ];
 
+$generico_sidebars = [
+	Sidebars::REMOVE => [
+		'header-right',
+		'sidebar-alt',
+	],
+];
+
 return [
 	ThemeSupport::class => [
 		ThemeSupport::ADD    => $generico_add_theme_support,
@@ -107,4 +115,5 @@ return [
 	],
 	ImageSizes::class => $generico_image_sizes,
 	Layouts::class    => $generico_layouts,
+	Sidebars::class   => $generico_sidebars,
 ];
