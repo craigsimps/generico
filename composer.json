@@ -9,7 +9,7 @@
     "generico/image-sizes": "^0.1.0",
     "generico/layouts": "^0.1.0",
     "generico/sidebars": "^0.1.0",
-    "generico/theme-settings": "^0.1.0",
+    "generico/theme-settings": "^0.2.0",
     "generico/theme-support": "^0.1.0"
   },
   "autoload": {
