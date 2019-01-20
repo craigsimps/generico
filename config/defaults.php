@@ -11,6 +11,7 @@
 namespace Generico\Theme;
 
 use Generico\Core\ImageSizes;
+use Generico\Core\Layouts;
 use Generico\Core\ThemeSupport;
 
 $generico_add_theme_support = [
@@ -91,10 +92,19 @@ $generico_image_sizes = [
 	],
 ];
 
+$generico_layouts = [
+	Layouts::REMOVE => [
+		'content-sidebar-sidebar',
+		'sidebar-content-sidebar',
+		'sidebar-sidebar-content',
+	],
+];
+
 return [
 	ThemeSupport::class => [
 		ThemeSupport::ADD    => $generico_add_theme_support,
 		ThemeSupport::REMOVE => [],
 	],
 	ImageSizes::class => $generico_image_sizes,
+	Layouts::class    => $generico_layouts,
 ];
