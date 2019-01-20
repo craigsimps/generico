@@ -14,6 +14,7 @@ use Generico\Core\ImageSizes;
 use Generico\Core\Layouts;
 use Generico\Core\Sidebars;
 use Generico\Core\ThemeSettings;
+use Generico\Core\ThemeSettingsMetaBoxes;
 use Generico\Core\ThemeSupport;
 
 $generico_add_theme_support = [
@@ -119,13 +120,21 @@ $generico_theme_settings = [
 	'site_layout'               => 'content-sidebar',
 ];
 
+$generico_theme_settings_meta_boxes = [
+	ThemeSettingsMetaBoxes::REMOVE => [
+		'genesis-theme-settings-header',
+		'genesis-theme-settings-nav',
+	],
+];
+
 return [
-	ThemeSupport::class  => [
+	ThemeSupport::class           => [
 		ThemeSupport::ADD    => $generico_add_theme_support,
 		ThemeSupport::REMOVE => [],
 	],
-	ImageSizes::class    => $generico_image_sizes,
-	Layouts::class       => $generico_layouts,
-	Sidebars::class      => $generico_sidebars,
-	ThemeSettings::class => $generico_theme_settings,
+	ImageSizes::class             => $generico_image_sizes,
+	Layouts::class                => $generico_layouts,
+	Sidebars::class               => $generico_sidebars,
+	ThemeSettings::class          => $generico_theme_settings,
+	ThemeSettingsMetaBoxes::class => $generico_theme_settings_meta_boxes,
 ];
