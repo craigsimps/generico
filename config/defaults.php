@@ -10,6 +10,7 @@
 
 namespace Generico\Theme;
 
+use Generico\Core\ImageSizes;
 use Generico\Core\ThemeSupport;
 
 $generico_add_theme_support = [
@@ -84,9 +85,16 @@ $generico_add_theme_support = [
 	],
 ];
 
+$generico_image_sizes = [
+	ImageSizes::ADD => [
+		'sidebar-featured' => [ 75, 75, true ],
+	],
+];
+
 return [
 	ThemeSupport::class => [
 		ThemeSupport::ADD    => $generico_add_theme_support,
 		ThemeSupport::REMOVE => [],
 	],
+	ImageSizes::class => $generico_image_sizes,
 ];
